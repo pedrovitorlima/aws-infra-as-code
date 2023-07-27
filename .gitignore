@@ -1,3 +1,4 @@
 1-hello/main
 */.aws-sam
 .idea
+*/.terraform

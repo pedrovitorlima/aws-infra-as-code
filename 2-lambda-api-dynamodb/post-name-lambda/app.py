@@ -14,6 +14,7 @@ def lambda_handler(event, context):
     name = event['body']
     db_item = {'id': str(hash(name)), 'name': name}
     table.put_item(Item=db_item)
+
     return {
         'statusCode': 200,
         'body': json.dumps('Name inserted successfully')

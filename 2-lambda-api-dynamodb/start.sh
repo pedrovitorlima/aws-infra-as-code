@@ -1,3 +1,4 @@
+
 #Run the local dynamodb emulator
 docker run -p 8000:8000 amazon/dynamodb-local
 
