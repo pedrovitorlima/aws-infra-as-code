@@ -1,4 +1,8 @@
 1-hello/main
 */.aws-sam
 .idea
-*/.terraform
+*.terraform
+*.terraform.lock.hcl
+*.tfstate
+*.zip
+*.tfstate.backup
