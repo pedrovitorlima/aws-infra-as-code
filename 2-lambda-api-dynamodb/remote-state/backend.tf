@@ -2,17 +2,17 @@ terraform {
     required_providers {
         aws = {
             source = "hashicorp/aws"
-            version = "~> 3.0"
+            version = "~> 5.0"
         }
     }
 }
 
 provider "aws" {
-    region = "ap-southeast-2"
+    region = var.aws_region
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-    bucket = "terraform-backend-infraascode-bucket"
+    bucket = format("terraform-backend-%s",var.suffix)
     force_destroy = true
 }
 
